@@ -1,0 +1,357 @@
+/* Estilo generales para el diseño */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* scroll para que el desplazamiento sea suave */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #EAEAEA; /* texto claro elegante */
+    background-color: #0B1C2C; /* azul petróleo oscuro elegante */
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;      
+    padding: 1rem;       
+}
+
+/* HEADER */
+.header {
+    background: #0D1B2A; /* azul marino profundo */
+    border-bottom: 1px solid #C3A356; /* dorado sutil */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+.header-inner {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0.75rem 0;
+}
+
+.Inicio ul {
+    list-style:none;
+    display:flex;
+    gap:1rem;
+    margin:0;
+    padding:0;
+    align-items:center;
+}
+
+.Inicio a {
+    color: #F5D67B; /* dorado claro elegante */
+    text-decoration:none; 
+    font-weight:500;
+}
+
+.Inicio a:hover {
+    color: #C3A356; /* dorado intenso al pasar el cursor */
+}
+
+.btn-dona {
+    background: linear-gradient(45deg, #262626d5, #a3945f); /* degradado dorado elegante */
+    color: #0D1B2A;
+    padding: 0.4rem 0.7rem;
+    border-radius: 8px;
+}
+
+/* HERO VIDEO (video de fondo) */
+.video-hero {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+/* esta clase la usas en: <section class="hero video-hero"> */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* video que cubre el fondo */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* capa de color encima del video */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom right,
+        rgba(13, 27, 42, 0.6),
+        rgba(0, 45, 85, 0.5)
+    ); /* azul marino + petróleo translúcido */
+    z-index: 1;
+}
+
+/* CONTENIDO ENCIMA DEL VIDEO (TU TEXTO Y BOTÓN) */
+.hero-content {
+    position: relative;
+    z-index: 2;             /* ← esto hace que esté encima del video  */
+    color: #F2F2F2; /* texto claro */
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #F5D67B; /* dorado para título */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #EAEAEA;
+}
+
+/* estilo específico del botón en el hero */
+.hero-actions .btn.primary {
+    background: #C3A356; /* dorado elegante */
+    color: #0D1B2A;
+    padding: 0.7rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BOTONES GENERALES */
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background: #C3A356;
+    color: #0D1B2A;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn.outline:hover{
+    background:rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* stats */
+.stats-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.stat {
+    flex: 0 1 140px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 1rem 0.8rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 107, 60, 0.2);
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #180c56;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #0b3864;
+    opacity: 0.95;
+}
+
+/* Projects */
+.rpoject {
+    padding:3rem 0;
+}
+
+.lead {
+    color:var(--muted);
+}
+
+.project-cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap:1rem;
+    margin-top:1rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    overflow:hidden;
+    transition:transform .2s;
+}
+
+.card:hover {
+    transform:translateY(-4px);
+}
+
+.card-img {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.card-body {
+    padding:1rem;
+}
+
+.card-body h3{
+    margin:0 0 0.4rem;
+}
+
+.card-body p {
+    color:var(--muted);
+    margin:0;
+}
+
+#México {
+    background-image:url("../IMG/Niños.jpg");
+}
+
+/* Newsletter */
+.newsletter {
+    padding: 2rem 0;
+    background: linear-gradient(90deg, #0D1B2A, #12343B); /* azul marino a petróleo */
+    color: #EAEAEA;
+}
+
+.newsletter-inner {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+}
+
+.subscribe-form {
+    display:flex; 
+    gap:0.5rem;
+}
+
+.subscribe-form input {
+    padding:0.6rem 0.8rem;
+    border-radius:8px;
+    border:none;
+    outline:none;
+}
+
+.form-message {
+    margin-top:0.6rem;
+}
+
+/* Footer */
+.site-footer {
+    background: #0D1B2A; /* azul marino elegante */
+    border-top: 1px solid #C3A356; /* dorado fino */
+    color: #EAEAEA;
+    margin-top: 3rem;
+}
+
+.footer-inner {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1rem;
+    padding:2rem 0;
+}
+
+.footer-social {
+    padding: 1.5rem 0;
+}
+
+.social-icons {
+    display:flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.social-icons a {
+    color:#F5D67B;
+    border: 1.5px solid #F5D67B;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.social-icons a:hover {
+    border-color: #C3A356;
+    color: #0D1B2A;
+    background: rgba(243, 207, 116, 0.15);
+    transform: scale(1.05);
+}
+
+.footer-bottom {
+    text-align:center;
+    padding:0.75rem 0;
+    color:#C3A356; /* dorado tenue */
+    font-size:0.9rem;
+}
+
+/* Responsive */
+@media(max-width:800px) {
+    .hero-text h1 {font-size:2rem;}
+    .stats-grid {justify-content:center;}
+    .Inicio {
+        display:none;
+        position:absolute;
+        top:64px;
+        right:1rem;
+        background:#0D1B2A;
+        padding:.5rem;
+        border-radius:8px;
+        box-shadow:0 6px 18px rgba(0,0,0,0.3);
+    }
+    .Inicio ul {flex-direction:column; gap:0;}
+    .menu-toggle {display:block;}
+}
