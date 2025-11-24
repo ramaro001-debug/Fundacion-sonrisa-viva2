@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Fundación sonrisa víva">
+<meta name="keywords" content="Fundación, sonrisa víva, ayuda, caridad">
+<meta name="author" content="Ricardo Amaro ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fundación sonrisa viva</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+/>
+
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a class="logo" href="#">
+            <img src="IMG/Logo.png" alt="Fundación sonrisa víva" height="70"/>
+        </a>
+
+        <nav class="Inicio">
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a class="btn-dona" href="#donar">Dona</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <section class="hero video-hero" id="Inicio"> 
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="IMG/Video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <!-- Contenido encima del video -->
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1>Cada sonrisa deja una huella</h1>
+                <p>La sonrisa hace la vida.</p>
+
+                <div class="hero-actions">
+                    <a class="btn primary" 
+                        href="https://forms.gle/JcUiWM84WsRfKf91A"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Dona, Sé parte
+                    </a>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">+2.000</div>
+                    <div class="stat-label">Sonrisas nuevas</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">+34.000</div>
+                    <div class="stat-label">Niñ@s ayudados</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">12.000</div>
+                    <div class="stat-label">Jóvenes en escuelas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="proyectos" class="projects container">
+        <h2>Proyectos en México</h2>
+        <p class="lead">Protegemos a los niños de México. Explora nuestros proyectos</p>
+
+        <div class="project-card">
+            <article class="card">
+                <div class="card-img" id="México"></div>
+                <div class="card-body">
+                    <h3>México</h3>
+                    <p>Programas de protección a los dientes de los niños y niñas</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!--Sección de suscripción-->    
+    <section id="contacto" class="newsletter">
+        <div class="container newsletter-inner">
+            <div>
+                <h2>¡No te pierdas lo último!</h2>
+                <p>Suscríbete para recibir noticias e historias.</p>
+            </div>
+            <form id="subscribeForm" class="subscribe-form" novalidate>
+                <input id="email" type="email" placeholder="Tu correo electrónico" required />
+                <button class="btn primary" type="submit">Suscribirme</button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-col">
+            <h4>Sobre la fundación</h4>
+            <p>Trabajando por la educación y las oportunidades para niñas, niños y jóvenes.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="#quienes">Quiénes somos</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <address>
+                Miguel Hidalgo - Avenida Homero - Polanco<br/>Ciudad de México, México<br/>
+                <a href="mailto:r.amaro001@ebc.edu.mx">r.amaro001@ebc.edu.mx</a>
+            </address>
+        </div>
+    </div>
+
+    <div class="footer-social">
+        <div class="container social-icons">
+            <a href="https://www.facebook.com/LaEBC/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/laebc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@EscuelaBancariayComercial" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://mx.linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/LaEBC" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">© <span id="anio"></span> Fundación sonrisa viva</div>
+    </div>
+</footer>
+
+<script src="JS/scrip.js"></script>
+</body>
+</html>
